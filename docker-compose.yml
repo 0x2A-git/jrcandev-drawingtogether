@@ -10,7 +10,7 @@ services:
         - web
     labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.test.rule=Host(`test.dev.netlib.re`)"
+        - "traefik.http.routers.test.rule=Host(`drawingtogether.jrcandev.netlib.re`)"
         - "traefik.http.routers.test.entrypoints=websecure"
         - "traefik.http.routers.test.tls.certresolver=lets-encrypt"
     restart: always
