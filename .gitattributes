@@ -1,0 +1,4 @@
+src/.env filter=git-crypt diff=git-crypt
+.env filter=git-crypt diff=git-crypt
+src/next.config.js filter=git-crypt diff=git-crypt
+
