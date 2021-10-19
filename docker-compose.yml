@@ -1,11 +1,13 @@
+version: "3"
+
 services:
 
   nginx: 
-    image: nginx:latest
     networks:
       - lan
       - web
     build:
+      context: ./
       dockerfile: nginx.Dockerfile
     ports:
       - 80:8080
@@ -20,10 +22,10 @@ services:
   node:
     depends_on:
       - db
-    image: node:latest
     networks:
       - lan
     build:
+      context: ./
       dockerfile: node.Dockerfile
 
     restart: always
