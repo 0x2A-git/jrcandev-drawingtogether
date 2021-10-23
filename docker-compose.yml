@@ -1,4 +1,4 @@
-version: "3"
+version: "3.1"
 
 services:
 
@@ -7,10 +7,10 @@ services:
       - lan
       - web
     build:
-      context: ./
+      context: .
       dockerfile: nginx.Dockerfile
-    ports:
-      - 80:8080
+    #ports:
+     # - 80:8080
 
     labels:
         - "traefik.enable=true"
@@ -25,7 +25,7 @@ services:
     networks:
       - lan
     build:
-      context: ./
+      context: .
       dockerfile: node.Dockerfile
 
     restart: always

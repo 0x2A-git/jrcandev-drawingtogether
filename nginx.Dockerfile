@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 FROM nginx:latest
 COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 8080
+EXPOSE 80

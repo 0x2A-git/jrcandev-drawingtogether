@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 FROM postgres:latest
 COPY docker/postgres.sql /docker-entrypoint-initdb.d/
 USER postgres
