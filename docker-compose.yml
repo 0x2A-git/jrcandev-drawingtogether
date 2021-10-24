@@ -2,7 +2,8 @@ version: "3.1"
 
 services:
 
-  nginx: 
+  nginx:
+    container_name: "${NAME_SERVER}"
     networks:
       - lan
       - web
@@ -20,6 +21,7 @@ services:
     restart: always
 
   node:
+    container_name: "${NAME}"
     depends_on:
       - db
     networks:
@@ -31,6 +33,7 @@ services:
     restart: always
 
   db:
+    container_name: "${NAME_DB}"
     image: postgres:latest
     
     networks:
